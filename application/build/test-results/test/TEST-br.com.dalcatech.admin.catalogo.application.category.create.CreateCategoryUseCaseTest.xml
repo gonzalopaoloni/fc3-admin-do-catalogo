@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.com.dalcatech.admin.catalogo.application.category.create.CreateCategoryUseCaseTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-07-31T01:53:57" hostname="MacBook-Pro-de-Gonzalo.local" time="0.056">
+  <properties/>
+  <testcase name="givenAValidCommand_whenGatewayThrowsRandomException_shouldReturnAnException()" classname="br.com.dalcatech.admin.catalogo.application.category.create.CreateCategoryUseCaseTest" time="0.052"/>
+  <testcase name="givenAValidCommandWithInactiveCategory_whenCallsCreateCategory_shouldReturnInactiveCaregoryId()" classname="br.com.dalcatech.admin.catalogo.application.category.create.CreateCategoryUseCaseTest" time="0.002"/>
+  <testcase name="givenAInvalidName_whenCallsCreateCategory_thenShouldReturnDomainExecption()" classname="br.com.dalcatech.admin.catalogo.application.category.create.CreateCategoryUseCaseTest" time="0.001"/>
+  <testcase name="givenAValidCommand_whenCallsCreateCategory_shouldReturnCaregoryId()" classname="br.com.dalcatech.admin.catalogo.application.category.create.CreateCategoryUseCaseTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.com.dalcatech.admin.catalogo.infrastructure.MainTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-27T01:02:35" hostname="MacBook-Pro-de-Gonzalo.local" time="0.01">
+  <properties/>
+  <testcase name="testMain()" classname="br.com.dalcatech.admin.catalogo.infrastructure.MainTest" time="0.01"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
