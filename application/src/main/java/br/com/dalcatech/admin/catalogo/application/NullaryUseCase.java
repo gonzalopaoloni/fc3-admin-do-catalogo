@@ -4,4 +4,5 @@ public abstract class NullaryUseCase<OUT>
     {
     //recebe nada e retorna alguma coisa
     public abstract OUT execute();
+
     }
