@@ -1,22 +1,41 @@
 plugins {
     id 'java'
-    id 'application'
-    id 'org.springframework.boot' version '2.6.7'
-    id "io.spring.dependency-management" version '1.0.11.RELEASE'
+    id 'application'  //torna nossa aplicacao em um java app
+    //2.6.7 no curso, traz com ele as versoes com a bibliotecas mais recentes
+    id 'org.springframework.boot' version '2.7.2'
+    //11 - plugin para incluir as depencidas do spring assim nao precisamos lidar manualmente com as versoes
+    id "io.spring.dependency-management" version '1.0.12.RELEASE'
+
 }
 
 group 'br.com.dalcatech.admin.catalogo.infrastructure'
 version '1.0-SNAPSHOT'
+
+bootJar
+        {
+            //isto serve para mudar o novo do jar final do projeto e colocar ele na raiz do projeto principal
+            archiveName('application.jar')
+            destinationDirectory.set(file("${rootProject.buildDir}/libs"))
+        }
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     implementation(project(":domain"))
     implementation(project(":application"))
+
+    implementation('mysql:mysql-connector-java') //conector mysql
+    implementation('org.springframework.boot:spring-boot-starter-web')
+        {
+            exclude module: 'spring-boot-starter-tomcat'  //tiro o tomcat porque vamos usar outro (Jboss)
+        }
+    implementation('org.springframework.boot:spring-boot-starter-undertow') //servidor web do jboos, usado no lugar do tomcat
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa') //eh quem faz a persistencia no banco, se conecta com as abstracoes sping
+
+    testImplementation ('org.springframework.boot:spring-boot-starter-test')
+    testRuntimeOnly('com.h2database:h2')
 }
 
 test {
