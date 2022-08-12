@@ -14,3 +14,21 @@ spring:
     url: jdbc:mysql://${mysql.url}/${mysql.schema}?useSLL=true$serverTimezone=UTC&characterEncoding=UTF-8
     username: ${mysql.username}
     password: ${mysql.password}
+    hikari:
+      auto-commit: false
+      connection-timeout: 250 # milisegundos, o ideal eh manter baixo para que estoure o timeout, eh melhor falhar rapido, do que ficar esperando por uma falha, para que as threas nao fiquem presas numa conexao
+      max-lifetime: 600000 #tempo maximo que uma conexao pode ficar aberta (10min) - security
+      maximum-pool-size: 20 #mantemos ate no maximo 20 conexoes com o banco de dados, o ideal eh manter baixo mesmo, pois eh algo muito custoso para o banco gerenciar
+      minimum-idle: 10
+      pool-name: master
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      "[hibernate.dialect]": org.hibernate.dialect.MySQL5InnoDBDialect
+      "[hibernate.generate_statistics]": false
+      "[hibernate.connection.provider_disables_autocommit]": true
+      #para aumentar a performance ao maximo , desabilitamos o autocommit e a open-in-view
+
