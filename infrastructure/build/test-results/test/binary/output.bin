@@ -8,26 +8,31 @@
 ) =========|_|==============|___/=/_/_/_/
 + :: Spring Boot ::                (v2.7.2)
 
-õ2022-08-05 22:04:05.278  INFO 2033 --- [    Test worker] b.c.d.a.catalogo.infrastructure.Main     : Starting Main using Java 17.0.2 on MacBook-Pro-de-Gonzalo.local with PID 2033 (started by gonzalospaoloni in /Users/gonzalospaoloni/IdeaProjects/fc3-admin-do-catalogo/infrastructure)
-é2022-08-05 22:04:05.279  INFO 2033 --- [    Test worker] b.c.d.a.catalogo.infrastructure.Main     : The following 1 profile is active: "test"
-†2022-08-05 22:04:05.564  INFO 2033 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-π2022-08-05 22:04:05.572  INFO 2033 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
-¿2022-08-05 22:04:05.816  WARN 2033 --- [    Test worker] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-ó2022-08-05 22:04:05.826  INFO 2033 --- [    Test worker] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-£2022-08-05 22:04:05.826  INFO 2033 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 534 ms
-2022-08-05 22:04:05.842  INFO 2033 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-Ñ2022-08-05 22:04:05.942  INFO 2033 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-∑2022-08-05 22:04:05.948  INFO 2033 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:adm_videos_test'
-û2022-08-05 22:04:06.018  INFO 2033 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-ó2022-08-05 22:04:06.053  INFO 2033 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-ù2022-08-05 22:04:06.138  INFO 2033 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-û2022-08-05 22:04:06.198  INFO 2033 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-ÿ2022-08-05 22:04:06.295  INFO 2033 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-®2022-08-05 22:04:06.299  INFO 2033 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-ú2022-08-05 22:04:06.317  WARN 2033 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-ç2022-08-05 22:04:06.471  INFO 2033 --- [    Test worker] io.undertow                              : starting server: Undertow - 2.2.18.Final
-}2022-08-05 22:04:06.475  INFO 2033 --- [    Test worker] org.xnio                                 : XNIO version 3.8.7.Final
-ê2022-08-05 22:04:06.480  INFO 2033 --- [    Test worker] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.7.Final
-Ü2022-08-05 22:04:06.518  INFO 2033 --- [    Test worker] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
-å2022-08-05 22:04:06.539  INFO 2033 --- [    Test worker] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 8080 (http)
-ö2022-08-05 22:04:06.546  INFO 2033 --- [    Test worker] b.c.d.a.catalogo.infrastructure.Main     : Started Main in 1.454 seconds (JVM running for 2.007)
+ù2022-08-16 21:46:02.102  INFO 32398 --- [    Test worker] b.c.d.a.catalogo.infrastructure.Main     : Starting Main using Java 17.0.2 on MacBook-Pro-de-Gonzalo.local with PID 32398 (started by gonzalospaoloni in /Users/gonzalospaoloni/IdeaProjects/fc3-admin-do-catalogo/infrastructure)
+è2022-08-16 21:46:02.103  INFO 32398 --- [    Test worker] b.c.d.a.catalogo.infrastructure.Main     : The following 1 profile is active: "test"
+°2022-08-16 21:46:02.401  INFO 32398 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ª2022-08-16 21:46:02.423  INFO 32398 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
+¡2022-08-16 21:46:02.678  WARN 32398 --- [    Test worker] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+ò2022-08-16 21:46:02.688  INFO 32398 --- [    Test worker] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+§2022-08-16 21:46:02.688  INFO 32398 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 571 ms
+Æ2022-08-16 21:46:02.702  WARN 32398 --- [    Test worker] com.zaxxer.hikari.HikariConfig           : master - idleTimeout is close to or more than maxLifetime, disabling it.
+z2022-08-16 21:46:02.703  INFO 32398 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : master - Starting...
+2022-08-16 21:46:02.803  INFO 32398 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : master - Start completed.
+∏2022-08-16 21:46:02.812  INFO 32398 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:adm_videos_test'
+ü2022-08-16 21:46:02.868  INFO 32398 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+ò2022-08-16 21:46:02.900  INFO 32398 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+û2022-08-16 21:46:02.987  INFO 32398 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+©2022-08-16 21:46:03.038  INFO 32398 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+∂2022-08-16 21:46:03.263  INFO 32398 --- [    Test worker] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@30a791a6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+ÇHibernate: create table category (id varchar(255) not null, active bit not null, created_at DATETIME(6) not null, deleted_at DATETIME(6), description varchar(4000), name varchar(255) not null, updated_at DATETIME(6) not null, primary key (id)) engine=InnoDB
+Ÿ2022-08-16 21:46:03.280  INFO 32398 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+©2022-08-16 21:46:03.283  INFO 32398 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+é2022-08-16 21:46:03.560  INFO 32398 --- [    Test worker] io.undertow                              : starting server: Undertow - 2.2.18.Final
+~2022-08-16 21:46:03.564  INFO 32398 --- [    Test worker] org.xnio                                 : XNIO version 3.8.7.Final
+ë2022-08-16 21:46:03.568  INFO 32398 --- [    Test worker] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.7.Final
+á2022-08-16 21:46:03.615  INFO 32398 --- [    Test worker] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+ç2022-08-16 21:46:03.632  INFO 32398 --- [    Test worker] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 8080 (http)
+õ2022-08-16 21:46:03.637  INFO 32398 --- [    Test worker] b.c.d.a.catalogo.infrastructure.Main     : Started Main in 1.716 seconds (JVM running for 2.101)
+ÆHibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+‘Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+ÅHibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)

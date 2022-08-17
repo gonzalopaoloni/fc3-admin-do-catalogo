@@ -50,8 +50,14 @@ public class Category extends AggregateRoot<CategoryID> implements Cloneable
         return deletedAt;
         }
 
-    private Category(final CategoryID anId, final String aName, final String aDescription, final boolean isActive,
-                    final Instant aCreationDate, final Instant aUpdateDate, final Instant aDeletedDate)
+    private Category(
+            final CategoryID anId,
+            final String aName,
+            final String aDescription,
+            final boolean isActive,
+            final Instant aCreationDate,
+            final Instant aUpdateDate,
+            final Instant aDeletedDate)
         {
         super(anId);
         this.name = aName;
@@ -62,18 +68,49 @@ public class Category extends AggregateRoot<CategoryID> implements Cloneable
         this.deletedAt = aDeletedDate;
         }
 
-    public static Category newCategory(final String aName,final String aDescription,final boolean isActive)
+    public static Category newCategory(final String aName, final String aDescription, final boolean isActive)
         {
         final var id = CategoryID.unique();
         var now = Instant.now();
         final var deletedAt = isActive ? null : now;
-        return new Category(id,aName,aDescription,isActive,now,now,deletedAt);
+        return new Category(id, aName, aDescription, isActive, now, now, deletedAt);
+        }
+
+    public static Category with(final Category aCategory)
+        {
+        return with(
+                aCategory.getId(),
+                aCategory.getName(),
+                aCategory.getDescription(),
+                aCategory.isActive,
+                aCategory.getCreatedAt(),
+                aCategory.getUpdatedAt(),
+                aCategory.getDeletedAt());
+        }
+
+    public static Category with(
+            final CategoryID anId,
+            final String name,
+            final String description,
+            final boolean active,
+            final Instant createdAt,
+            final Instant updatedAt,
+            final Instant deletedAt)
+        {
+        return new Category(
+                anId,
+                name,
+                description,
+                active,
+                createdAt,
+                updatedAt,
+                deletedAt);
         }
 
     @Override
     public void validate(final ValidationHandler handler)
         {
-        new CategoryValidator(this,handler).validate();
+        new CategoryValidator(this, handler).validate();
         }
 
     public Category deactivate()
@@ -98,7 +135,7 @@ public class Category extends AggregateRoot<CategoryID> implements Cloneable
 
     public Category update(final String aName, final String aDescription, final boolean isActive)
         {
-        if(isActive)
+        if (isActive)
             activate();
         else
             deactivate();
