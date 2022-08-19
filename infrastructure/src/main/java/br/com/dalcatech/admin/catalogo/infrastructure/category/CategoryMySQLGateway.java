@@ -5,6 +5,7 @@ import br.com.dalcatech.admin.catalogo.domain.category.CategoryGateway;
 import br.com.dalcatech.admin.catalogo.domain.category.CategoryID;
 import br.com.dalcatech.admin.catalogo.domain.category.CategorySearchQuery;
 import br.com.dalcatech.admin.catalogo.domain.pagination.Pagination;
+import br.com.dalcatech.admin.catalogo.infrastructure.category.persistence.CategoryJpaEntity;
 import br.com.dalcatech.admin.catalogo.infrastructure.category.persistence.CategoryRepository;
 import org.springframework.stereotype.Service;
 
@@ -21,9 +22,9 @@ public class CategoryMySQLGateway implements CategoryGateway
         }
 
     @Override
-    public Category create(Category aCategory)
+    public Category create(final Category aCategory)
         {
-        return null;
+        return repository.save(CategoryJpaEntity.from(aCategory)).toAggredate();
         }
 
     @Override

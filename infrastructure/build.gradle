@@ -43,6 +43,7 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-undertow') //servidor web do jboos, usado no lugar do tomcat
     implementation('org.springframework.boot:spring-boot-starter-data-jpa') //eh quem faz a persistencia no banco, se conecta com as abstracoes sping
 
+    testImplementation('org.flywaydb:flyway-core')
     testImplementation ('org.springframework.boot:spring-boot-starter-test')
     testRuntimeOnly('com.h2database:h2')
 }
