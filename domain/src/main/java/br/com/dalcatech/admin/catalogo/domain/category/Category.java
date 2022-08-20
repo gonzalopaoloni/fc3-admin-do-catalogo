@@ -5,6 +5,7 @@ import br.com.dalcatech.admin.catalogo.domain.AggregateRoot;
 import br.com.dalcatech.admin.catalogo.domain.validation.ValidationHandler;
 
 import java.time.Instant;
+import java.util.Objects;
 
 public class Category extends AggregateRoot<CategoryID> implements Cloneable
     {
@@ -60,11 +61,12 @@ public class Category extends AggregateRoot<CategoryID> implements Cloneable
             final Instant aDeletedDate)
         {
         super(anId);
-        this.name = aName;
+        this.name = aName; //o nome e verificado no validator, porque tem que mostrar ao usuario o erro
         this.description = aDescription;
         this.isActive = isActive;
-        this.createdAt = aCreationDate;
-        this.updatedAt = aUpdateDate;
+        //createdAt e updatedAt nulos seriam bug de desenvolvedor, entao a gente separa com a parte do formulario, do usuario final
+        this.createdAt = Objects.requireNonNull(aCreationDate, "'createdAt' should not be null'");
+        this.updatedAt = Objects.requireNonNull(aUpdateDate,"'updatedAt' should not be null'");
         this.deletedAt = aDeletedDate;
         }
 
