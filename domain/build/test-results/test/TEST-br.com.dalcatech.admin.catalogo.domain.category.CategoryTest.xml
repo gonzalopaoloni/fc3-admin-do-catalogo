@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2022-08-17T00:45:59" hostname="MacBook-Pro-de-Gonzalo.local" time="0.022">
+<testsuite name="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2022-08-20T17:50:29" hostname="MacBook-Pro-de-Gonzalo.local" time="0.019">
   <properties/>
-  <testcase name="givenAValidInactiveCategory_whenCallActivate_thenReturnCategoryActivated()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.013"/>
-  <testcase name="givenAInvalidNullName_whenCallNewCategoryAndValidate_thenShouldReceiveError()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.002"/>
-  <testcase name="givenAValidCategory_whenCallUpdate_thenReturnCategoryUpdated()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.001"/>
+  <testcase name="givenAValidInactiveCategory_whenCallActivate_thenReturnCategoryActivated()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.012"/>
+  <testcase name="givenAInvalidNullName_whenCallNewCategoryAndValidate_thenShouldReceiveError()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.0"/>
+  <testcase name="givenAValidCategory_whenCallUpdate_thenReturnCategoryUpdated()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.0"/>
   <testcase name="givenAValidActiveCategory_whenCallDeactivate_thenReturnCategoryInactivated()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.001"/>
-  <testcase name="givenAInvalidNameLengthMoreThan255_whenCallNewCategoryAndValidate_thenShouldReceiveError()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.0"/>
-  <testcase name="givenAInvalidEmptyName_whenCallNewCategoryAndValidate_thenShouldReceiveError()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.001"/>
+  <testcase name="givenAInvalidNameLengthMoreThan255_whenCallNewCategoryAndValidate_thenShouldReceiveError()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.001"/>
+  <testcase name="givenAInvalidEmptyName_whenCallNewCategoryAndValidate_thenShouldReceiveError()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.0"/>
   <testcase name="givenAValidCategory_whenCallUpdateWithInvalidParams_thenReturnCategoryUpdated()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.001"/>
   <testcase name="givenAValidEmptyDescription_whenCallNewCategory_thenShouldRecieveOK()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.0"/>
   <testcase name="givenAInvalidNameLengthLessThan3_whenCallNewCategoryAndValidate_thenShouldReceiveError()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.001"/>
   <testcase name="givenAValidFalseIsActive_whenCallNewCategory_thenShouldRecieveOK()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.0"/>
-  <testcase name="givenAValidParams_whenCallNewCategory_thenInitiateACategory()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.0"/>
-  <testcase name="givenAValidCategory_whenCallUpdateToInactive_thenReturnCategoryUpdated()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.001"/>
+  <testcase name="givenAValidParams_whenCallNewCategory_thenInitiateACategory()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.001"/>
+  <testcase name="givenAValidCategory_whenCallUpdateToInactive_thenReturnCategoryUpdated()" classname="br.com.dalcatech.admin.catalogo.domain.category.CategoryTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

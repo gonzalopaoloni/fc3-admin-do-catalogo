@@ -7,6 +7,7 @@ import br.com.dalcatech.admin.catalogo.domain.category.CategorySearchQuery;
 import br.com.dalcatech.admin.catalogo.domain.pagination.Pagination;
 import br.com.dalcatech.admin.catalogo.infrastructure.category.persistence.CategoryJpaEntity;
 import br.com.dalcatech.admin.catalogo.infrastructure.category.persistence.CategoryRepository;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -21,33 +22,46 @@ public class CategoryMySQLGateway implements CategoryGateway
         this.repository = repository;
         }
 
+    private Category save(final Category aCategory)
+        {
+        return this.repository.save(CategoryJpaEntity.from(aCategory)).toAggredate();
+        }
     @Override
     public Category create(final Category aCategory)
         {
-        return repository.save(CategoryJpaEntity.from(aCategory)).toAggredate();
+        return save(aCategory);
         }
 
     @Override
     public void deleteById(CategoryID anId)
         {
-
+        String anIdValue = anId.getValue();
+        if(this.repository.existsById(anIdValue))
+            {
+            this.repository.deleteById(anIdValue);
+            }
         }
 
     @Override
     public Optional<Category> findById(CategoryID anId)
         {
-        return Optional.empty();
+        return this.repository.findById(anId.getValue())
+                .map(CategoryJpaEntity::toAggredate);
         }
 
     @Override
-    public Category update(Category aCategory)
+    public Category update(final Category aCategory)
         {
-        return null;
+        return save(aCategory);
         }
 
     @Override
-    public Pagination<Category> findAll(CategorySearchQuery aQuery)
+    public Pagination<Category> findAll(final CategorySearchQuery aQuery)
         {
+        //Paginacao
+        //Busca dinamica pelo criterio terms (name ou description)
+
+
         return null;
         }
     }

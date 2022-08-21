@@ -25,7 +25,6 @@ public class UpdateCategoryUseCaseTest
     {
     @InjectMocks
     private DefaultUpdateCategoryUseCase useCase;
-
     @Mock
     private CategoryGateway categoryGateway;
 
