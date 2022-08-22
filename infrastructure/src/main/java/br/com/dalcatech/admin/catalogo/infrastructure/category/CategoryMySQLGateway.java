@@ -7,9 +7,16 @@ import br.com.dalcatech.admin.catalogo.domain.category.CategorySearchQuery;
 import br.com.dalcatech.admin.catalogo.domain.pagination.Pagination;
 import br.com.dalcatech.admin.catalogo.infrastructure.category.persistence.CategoryJpaEntity;
 import br.com.dalcatech.admin.catalogo.infrastructure.category.persistence.CategoryRepository;
+import br.com.dalcatech.admin.catalogo.infrastructure.utils.SpecificationUtils;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 import java.util.Optional;
 
 @Service //poderia ser @Component
@@ -59,9 +66,27 @@ public class CategoryMySQLGateway implements CategoryGateway
     public Pagination<Category> findAll(final CategorySearchQuery aQuery)
         {
         //Paginacao
+        final var page = PageRequest.of(
+                aQuery.page(),
+                aQuery.perPage(),
+                Sort.by(Sort.Direction.fromString(aQuery.direction()), aQuery.sort()));
+
         //Busca dinamica pelo criterio terms (name ou description)
+        final var specifications = Optional.ofNullable(aQuery.terms())
+                .filter(str -> !str.isBlank())
+                .map(str -> {
+                    final Specification<CategoryJpaEntity> nameLike = SpecificationUtils.like("name" , str);
+                    final Specification<CategoryJpaEntity> descriptionLike = SpecificationUtils.like("description",str);
+                    return nameLike.or(descriptionLike);
+                })
+                .orElse(null);
 
+        final var pageResult =this.repository.findAll(Specification.where(specifications), page);
 
-        return null;
+        return new Pagination<>(
+                pageResult.getNumber(),
+                pageResult.getSize(),
+                pageResult.getTotalElements(),
+                pageResult.map(CategoryJpaEntity::toAggredate).toList());
         }
     }
