@@ -3,15 +3,15 @@ package br.com.dalcatech.admin.catalogo.application.category.create;
 import br.com.dalcatech.admin.catalogo.domain.category.Category;
 import br.com.dalcatech.admin.catalogo.domain.category.CategoryGateway;
 import br.com.dalcatech.admin.catalogo.domain.validation.handler.Notification;
-import br.com.dalcatech.admin.catalogo.domain.validation.handler.ThrowsValidationHandler;
 import io.vavr.API;
 import io.vavr.control.Either;
 
 import java.util.Objects;
 
 import static io.vavr.API.Left;
-import static io.vavr.API.Right;
 
+//o named serve para injetar as dependencias do javax injection
+//@Named vamos fazer da forma raiz, nao utilizando nenhuma biblioteca duvidosa
 public class DefaultCreateCategoryUseCase extends CreateCategoryUseCase
     {
     private final CategoryGateway categoryGateway;

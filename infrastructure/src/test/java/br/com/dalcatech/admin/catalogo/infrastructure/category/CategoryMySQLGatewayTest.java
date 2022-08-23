@@ -3,7 +3,7 @@ package br.com.dalcatech.admin.catalogo.infrastructure.category;
 import br.com.dalcatech.admin.catalogo.domain.category.Category;
 import br.com.dalcatech.admin.catalogo.domain.category.CategoryID;
 import br.com.dalcatech.admin.catalogo.domain.category.CategorySearchQuery;
-import br.com.dalcatech.admin.catalogo.infrastructure.MySQLGatewayTest;
+import br.com.dalcatech.admin.catalogo.MySQLGatewayTest;
 import br.com.dalcatech.admin.catalogo.infrastructure.category.persistence.CategoryJpaEntity;
 import br.com.dalcatech.admin.catalogo.infrastructure.category.persistence.CategoryRepository;
 import org.junit.jupiter.api.Assertions;
