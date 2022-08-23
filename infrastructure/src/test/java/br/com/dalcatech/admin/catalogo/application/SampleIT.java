@@ -16,6 +16,7 @@ public class SampleIT
     @Autowired
     private CategoryRepository categoryRepository;
 
+
     @Test
     public void test()
         {
