@@ -35,6 +35,8 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":application"))
 
+    implementation 'io.vavr:vavr:0.10.4'
+
     implementation('mysql:mysql-connector-java') //conector mysql
     implementation('org.springframework.boot:spring-boot-starter-web')
         {

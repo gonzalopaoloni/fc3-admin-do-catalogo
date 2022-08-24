@@ -17,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class CategoryUseCaseConfig
     {
+    //injecao de dependencias dos casos de usos
     private final CategoryGateway categoryGateway;
 
     public CategoryUseCaseConfig(final CategoryGateway categoryGateway)

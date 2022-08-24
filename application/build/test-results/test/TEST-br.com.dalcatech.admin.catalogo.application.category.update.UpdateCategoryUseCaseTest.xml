@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.com.dalcatech.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-08-20T17:50:29" hostname="MacBook-Pro-de-Gonzalo.local" time="0.01">
+<testsuite name="br.com.dalcatech.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-08-24T01:17:13" hostname="MacBook-Pro-de-Gonzalo.local" time="0.009">
   <properties/>
   <testcase name="givenAValidCommand_whenGatewayThrowsRandomException_shouldReturnAnException()" classname="br.com.dalcatech.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest" time="0.002"/>
   <testcase name="givenAValidCommandWithInvalidID_whenCallsUpdateCategory_shouldReturnNotFoundException()" classname="br.com.dalcatech.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest" time="0.001"/>
   <testcase name="givenAInvalidName_whenCallsUpdateCategory_thenShouldReturnDomainExecption()" classname="br.com.dalcatech.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest" time="0.001"/>
-  <testcase name="givenAValidCommand_whenCallsUpdateCategory_shouldReturnCaregoryId()" classname="br.com.dalcatech.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest" time="0.004"/>
-  <testcase name="givenAValidInactivateCommand_whenCallsUpdateCategory_shouldReturnInactivateCaregoryId()" classname="br.com.dalcatech.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest" time="0.001"/>
+  <testcase name="givenAValidCommand_whenCallsUpdateCategory_shouldReturnCaregoryId()" classname="br.com.dalcatech.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest" time="0.001"/>
+  <testcase name="givenAValidInactivateCommand_whenCallsUpdateCategory_shouldReturnInactivateCaregoryId()" classname="br.com.dalcatech.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -20,10 +20,8 @@ public class CreateCategoryUseCaseTest
     {
     @InjectMocks
     private DefaultCreateCategoryUseCase useCase;
-
     @Mock
     private CategoryGateway categoryGateway;
-
     @BeforeEach
     void cleanUp()
         {

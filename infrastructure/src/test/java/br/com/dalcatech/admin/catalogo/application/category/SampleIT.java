@@ -1,4 +1,4 @@
-package br.com.dalcatech.admin.catalogo.application;
+package br.com.dalcatech.admin.catalogo.application.category;
 
 import br.com.dalcatech.admin.catalogo.IntegrationTest;
 import br.com.dalcatech.admin.catalogo.application.category.create.CreateCategoryUseCase;
@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @IntegrationTest
 public class SampleIT
     {
+    //(IT = IntegrationTest)
     @Autowired
     private CreateCategoryUseCase useCase;
 
@@ -18,7 +19,7 @@ public class SampleIT
 
 
     @Test
-    public void test()
+    public void testInjects()
         {
         Assertions.assertNotNull(useCase);
         Assertions.assertNotNull(categoryRepository);

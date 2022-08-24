@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.com.dalcatech.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-08-20T17:50:29" hostname="MacBook-Pro-de-Gonzalo.local" time="0.004">
+<testsuite name="br.com.dalcatech.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-08-24T01:17:13" hostname="MacBook-Pro-de-Gonzalo.local" time="0.004">
   <properties/>
   <testcase name="givenAValidId_whenCallsGetCategory_shouldReturnCategory()" classname="br.com.dalcatech.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseTest" time="0.002"/>
   <testcase name="givenAValidID_whenGatewayThrowsException_shouldReturnException()" classname="br.com.dalcatech.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseTest" time="0.001"/>
