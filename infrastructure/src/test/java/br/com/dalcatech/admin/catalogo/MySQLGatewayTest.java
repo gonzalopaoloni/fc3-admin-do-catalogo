@@ -19,7 +19,7 @@ import java.util.Collection;
 @ActiveProfiles("test")
 //poderia usar @SpringBootTest mas eh demorado demais, mas como uso o DataJpaTest, preciso inserir o componetScan para adicionar as classes MySQLGateway
 @ComponentScan(includeFilters = {
-        @ComponentScan.Filter(type = FilterType.REGEX, pattern = ".*[MySQLGateway]")
+        @ComponentScan.Filter(type = FilterType.REGEX, pattern = ".[MySQLGateway]")
 })
 @DataJpaTest
 @ExtendWith(CleanUpExtension.class)
