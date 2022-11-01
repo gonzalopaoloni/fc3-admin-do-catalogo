@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.com.dalcatech.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-10-11T00:18:30" hostname="MacBook-Pro-de-Gonzalo.local" time="0.004">
+<testsuite name="br.com.dalcatech.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-11-01T02:17:32" hostname="MacBook-Pro-de-Gonzalo.local" time="0.004">
   <properties/>
   <testcase name="givenAValidId_whenCallsGetCategory_shouldReturnCategory()" classname="br.com.dalcatech.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseTest" time="0.002"/>
-  <testcase name="givenAValidID_whenGatewayThrowsException_shouldReturnException()" classname="br.com.dalcatech.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseTest" time="0.0"/>
-  <testcase name="givenAnInvalidId_whenCallsGetCategory_shouldReturnNotFound()" classname="br.com.dalcatech.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseTest" time="0.0"/>
+  <testcase name="givenAValidID_whenGatewayThrowsException_shouldReturnException()" classname="br.com.dalcatech.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseTest" time="0.001"/>
+  <testcase name="givenAnInvalidId_whenCallsGetCategory_shouldReturnNotFound()" classname="br.com.dalcatech.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
